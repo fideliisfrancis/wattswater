@@ -1,0 +1,312 @@
+$nav-link-color:#5A5A5A;
+$nav-link-active-color:#930c05;
+$img-width:140px;
+$font-bold:bold;
+$rp:0;
+$rpl:0;
+$rpr:0;
+$remove-margin:0;
+$font-10:10px;
+$font-12:12px;
+$font-15:15px;
+$font-20:20px;
+$plr-10:10px 0px;
+$amt-30:30px;
+$amb-15px:15px;
+
+
+
+@mixin title {
+    color: #5A5A5A;
+    font-weight: $font-bold;
+}
+
+@mixin title-links {
+    color: #5A5A5A;
+    font-size: $font-12;
+    font-weight: $font-bold;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@mixin title-arrows {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@mixin social-icons {
+    .social-icons{ margin: $remove-margin;}
+    .social-icons li{display: inline; padding: 0 8px;}
+    .social-icons li:last-child{padding-right: $rpr;}
+    .social-icons li a{ text-decoration: none; color: $nav-link-color; font-size: $font-15;}  
+}
+
+
+
+
+
+//Secondary font
+$second-font-family-base: "lato_regular",Times,serif !default;
+$second-font-family-primary: "lato_regular" !default;
+//Added below variable for hardcoded value in sass files
+
+$screen-sm-max: 991px;
+$screen-xs-max: 767px;
+
+$screen-sm-max: 991px;
+$screen-xs-max: 767px;
+
+
+$font-title: "JosefinSans_Regular",Times,serif !default;
+$font-title-medium: "JosefinSans_medium";
+$font-title-regular: "JosefinSans_Regular";
+$font-title-light: "JosefinSans_light";
+$font-title-bold: 'Josefin Sans';
+$font-title-thin: "JosefinSans_thin";
+$font-title-extralight: "JosefinSans_extralight";
+$font-title-semibold: "JosefinSans_semibold";
+
+
+
+//Secondary font
+$second-font: "lato_Medium";
+$second-font-regular: "lato_regular";
+$second-font-medium: "lato_Medium";
+$second-font-black: "lato_black";
+$second-font-blackItalic: "lato_blackItalic";
+$second-font-thin: "lato_thin";
+$second-font-thinItalic: "lato_thinItalic";
+$second-font-light: "lato_light";
+$second-font-lightItalic: "lato_lightItalic";
+$second-font-bold: "lato_bold";
+$second-font-boldItalic: "lato_boldItalic";
+$second-font-italic: "lato_italic";
+
+
+
+
+$font-size-base: 1rem !default;
+$font-size-h1: 36px !default;
+$font-size-h2: 30px !default;
+$font-size-h3: 24px !default;
+$font-size-h4: 18px !default;
+$font-size-h5: 16px !default;
+
+
+//custom fonts
+$font-48: 48px;
+$font-40: 40px;
+$font-32: 32px;
+$font-28: 28px;
+
+//line-height
+
+$lh-56: 56px;
+$lh-48: 48px;
+$lh-40: 40px;
+$lh-36: 36px;
+$lh-32: 32px;
+
+$gn-theme-bold-text-color: #0F2A56;
+
+$gn-theme-dark-bg: #001A39;
+$gn-theme-bright-header-text: #FFF45F;
+$gn-theme-bright-body-text: #FFFFFF;
+$gn-theme-bright-body-blue-text: #0072BC;
+//stylenormal-weightbold
+// @include sn-wb;
+//stylenormal-weightnormal
+// @include sn-wn;
+// @include head-1;
+// @include head-2;
+
+
+
+
+@mixin josefin-thin {
+	font-family: $font-title-thin !important;
+}
+
+@mixin josefin-extralight {
+	font-family: $font-title-extralight !important;
+}
+
+@mixin josefin-light {
+	font-family: $font-title-light !important;
+}
+
+@mixin josefin-regular {
+	font-family: $font-title-regular !important;
+}
+
+@mixin josefin-medium {
+	font-family: $font-title-medium !important;
+}
+
+@mixin josefin-semibold {
+	font-family: $font-title-semibold !important;
+}
+
+@mixin josefin-bold {
+	font-family: $font-title-bold !important;
+}
+
+//Secondary font
+@mixin second-base {
+    font-family: $second-font-family-base !important;
+}
+
+@mixin second-title {
+    font-family: $second-font-title-bold !important;
+}
+
+@mixin second-regular {
+    font-family: $second-font-regular !important;
+}
+
+@mixin second-medium {
+    font-family: $second-font-medium !important;
+}
+
+@mixin second-black {
+    font-family: $second-font-black !important;
+}
+
+@mixin second-blackItalic {
+    font-family: $second-font-blackItalic !important;
+}
+
+@mixin second-thin {
+    font-family: $second-font-thin !important;
+}
+
+@mixin second-thinItalic {
+    font-family: $second-font-thinItalic !important;
+}
+
+@mixin second-light {
+    font-family: $second-font-light !important;
+}
+
+@mixin second-lightItalic {
+    font-family: $second-font-lightItalic !important;
+}
+
+@mixin second-bold {
+    font-family: $second-font-bold !important;
+}
+
+@mixin second-boldItalic {
+    font-family: $second-font-lightItalic !important;
+}
+
+@mixin second-italic {
+    font-family: $second-font-italic !important;
+}
+
+$accordian-bg: #C9D8EE;
+
+
+
+//CDN Fonts
+$cdn-font-josefin: 'Josefin Sans', sans-serif;
+$cdn-font-lato: 'Lato', sans-serif;
+
+$font-bodytext-medium: 'Josefin Sans', sans-serif;
+
+//Secondary font
+$second-font-bodytext-medium: 'Lato', sans-serif;
+
+
+
+//stylenormal-weightnormal
+@mixin sn-wn {
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+//stylenormal-weightnormal
+@mixin fn-wn {
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+
+
+//stylenormal-weightregular
+@mixin fn-wr {
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+}
+
+//stylenormal-weightmedium
+@mixin fn-wm {
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+
+//stylenormal-weightbold
+@mixin sn-wb {
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+}
+
+//stylenormal-weightbold
+@mixin fn-wb {
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+}
+
+
+@mixin swap {
+    font-display: swap;
+}
+
+
+@mixin head-1 {
+    //font-family morangablack
+    @include sn-wb;
+    letter-spacing: 5.10897e-09px;
+    font-family: $cdn-font-josefin;
+}
+
+@mixin head-2 {
+    //font-family morangabold
+    @include sn-wb;
+    letter-spacing: 5.10897e-09px;
+    font-family: $cdn-font-josefin;
+}
+
+@mixin head-3 {
+    //font-family huggies-baton-turbomedium
+    @include sn-wb;
+    letter-spacing: 5.10897e-09px;
+    font-family: $font-bodytext-medium;
+}
+
+//Secondary font
+@mixin head-second-3 {
+    //font-family lato
+    @include sn-wb;
+    letter-spacing: 5.10897e-09px;
+    font-family: $second-font-bodytext-medium;
+}
+
+
+
+//CDN Mixin
+
+@mixin josefin-sans {
+    font-family: $cdn-font-josefin !important;
+}
+
+@mixin lato {
+    font-family: $cdn-font-lato !important;
+}
+
+//CDN Mixin END

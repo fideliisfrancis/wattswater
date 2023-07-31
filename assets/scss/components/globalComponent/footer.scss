@@ -1,0 +1,12 @@
+footer{
+    .img-wd{width:$img-width}
+    .footer-navbar{float: right; margin: $remove-margin;}
+    .footer-navbar li{display: inline; padding: 0 10px;}
+    .footer-navbar li:last-child{padding-right: $rpr;}
+    .footer-navbar li a{ text-decoration: none; color: $nav-link-color; font-size: $font-12; font-weight: $font-bold;}
+    .copy-rights{color: $nav-link-color; font-size: $font-10;}
+    .plr-10{padding: $plr-10;}
+    .pb-20{padding-bottom: 20px;}
+    .bt{border-top: 1px solid #dedcdc;font: size 14px; }
+    @include social-icons;
+}

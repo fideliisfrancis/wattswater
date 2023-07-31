@@ -1,0 +1,24 @@
+﻿
+// variables
+@import "../variable.scss";
+
+
+
+//global page scss
+
+@import "../../../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../../../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+
+
+@import "../components/globalComponent/header.scss";
+@import "../components/globalComponent/footer.scss";
+@import "../components/globalComponent/socialmedia.scss";
+@import "../components/globalComponent/breadcrumb.scss";
+
+
+
+
+
+

@@ -1,0 +1,109 @@
+.header-border {
+  border-bottom: 1px solid #dedcdc;
+}
+
+.rp {
+  padding: 0;
+}
+
+.slick-slide {
+  margin: 0 10px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
+}
+
+section .course {
+  margin-top: 30px;
+}
+section .courses-title {
+  color: #5A5A5A;
+  font-weight: bold;
+}
+section .courses-links {
+  color: #5A5A5A;
+  font-size: 12px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+section .courses-arrows {
+  display: inline-block;
+  vertical-align: middle;
+}
+section .bg-img img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+section .course-buttons {
+  margin-bottom: 15px;
+}
+section .course-buttons button {
+  font-size: 12px;
+  padding: 4px;
+  border-radius: 4px;
+}
+section .course-buttons button {
+  background-color: #DFE8F1;
+  color: #4E76A1;
+  border: transparent;
+}
+section .course-buttons button:first-child {
+  background-color: #ffd7b5;
+  color: #8B4000;
+}
+section .course-buttons button:last-child {
+  background-color: #DFE8F1;
+  color: #4E76A1;
+}
+section .course-card-subtitle svg {
+  color: #8B4000;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+section .course-card-subtitle ul {
+  margin: 0;
+  padding: 0;
+}
+section .course-card-subtitle ul li {
+  display: inline;
+  padding: 0 8px;
+  padding: 0;
+}
+section .course-card-subtitle ul li:last-child {
+  padding-right: 0;
+}
+section .course-card-subtitle ul span {
+  font-size: 10px;
+  font-weight: bold;
+}
+section .course-card-subtitle ul .date {
+  color: #6287AF;
+}
+section .course .row:first-child {
+  margin-bottom: 15px;
+}
+section .course .rating-blk .fa-star {
+  color: #e5e2e2;
+}
+section .course .rating-blk .checked {
+  color: #DBA800;
+}
+
+@media only screen and (max-width: 600px) {
+  .social-icons {
+    text-align: left !important;
+  }
+  .footer-navbar {
+    float: left !important;
+  }
+  .footer-navbar, .social-icons {
+    padding-left: 0;
+  }
+  .footer-navbar li:first-child, .social-icons li:first-child {
+    padding-left: 0;
+  }
+}

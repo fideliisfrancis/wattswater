@@ -1,0 +1,43 @@
+
+
+.header-border{border-bottom: 1px solid #dedcdc;}
+.rp{padding: $rp }
+
+
+.slick-slide{margin: 0 10px;}
+.slick-prev:before, .slick-next:before{ color: #000;}
+
+
+section{
+    .course{margin-top: $amt-30;}
+    .courses-title{@include title}
+    .courses-links{@include title-links}
+    .courses-arrows{@include title-arrows}
+    .bg-img img{max-width: 100%;border-radius: 5px;margin-bottom: $amb-15px;}
+    .course-buttons{margin-bottom: $amb-15px;}
+    .course-buttons button{font-size: $font-12;padding: 4px;border-radius: 4px;}
+    .course-buttons button{background-color: #DFE8F1;color:#4E76A1;border: transparent; }
+    .course-buttons button:first-child{background-color: #ffd7b5;color:#8B4000;}
+    .course-buttons button:last-child{background-color: #DFE8F1;color:#4E76A1;}
+    .course-card-subtitle svg{color: #8B4000; display: inline-block; height: 16px; width: 16px;}
+    .course-card-subtitle ul{ margin: $remove-margin; padding: $rp;}
+    .course-card-subtitle ul li{display: inline; padding: 0 8px; padding: $rp;}
+    .course-card-subtitle ul li:last-child{padding-right: $rpr;} 
+    .course-card-subtitle ul span{font-size: $font-10; font-weight: $font-bold;}
+    .course-card-subtitle ul .date{color: #6287AF;}
+    .course .row:first-child{margin-bottom: $amb-15px;}
+    .course .rating-blk .fa-star {color: #e5e2e2;}
+    .course .rating-blk .checked{color: #DBA800;}
+}
+
+
+@media only screen and (max-width: 600px) {
+    .social-icons{text-align: left !important;}
+    .footer-navbar{float: left !important;}
+    .footer-navbar, .social-icons{padding-left: $rpl;}
+    .footer-navbar li:first-child, .social-icons li:first-child{padding-left: $rpl;}
+}
+
+
+
+
