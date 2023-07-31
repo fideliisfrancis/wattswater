@@ -11,21 +11,21 @@ const plumber = require("gulp-plumber");
 const browserSync = require("browser-sync").create();
 
 // BrowserSync
-function browsersyncServe(cb){
-    browserSync.init({
-      server: {
-        baseDir: "html/",
-        directory: true
-      }
-    });
-    cb();
-  }
-  
-  function browsersyncReload(cb){
-    browserSync.reload();
-    cb();
-  }
-  
+function browsersyncServe(cb) {
+  browserSync.init({
+    server: {
+      baseDir: "html/",
+      directory: true
+    }
+  });
+  cb();
+}
+
+function browsersyncReload(cb) {
+  browserSync.reload();
+  cb();
+}
+
 
 /*! =======================================================
                     //CSS MINIFICATION STARTS
@@ -34,39 +34,39 @@ function browsersyncServe(cb){
 //globalComponentcss minification
 
 function globalcompscss() {
-    return src(conf.src.srcCssTDRAbase + conf.src.sasssrc.globalComps)
-        .pipe(sass({
-          quietDeps: true
-          }).on("error", sass.logError))
-        .pipe(plumber())
-        .pipe(concat("globalcomps.css"))
-        .pipe(dest(conf.dest.destCssTDRAbase + conf.dest.cssdest.globalComps))
-        .pipe(
-            rename({
-                suffix: ".min",
-            })
-        )
-        .pipe(cleanCSS())
-        .pipe(postcss([cssnano()]))
-        .pipe(dest(conf.dest.destCssTDRAbase + conf.dest.cssdest.globalComps))
-        .pipe(browserSync.reload({stream: true}));
+  return src(conf.src.srcCssWATTSbase + conf.src.sasssrc.globalComps)
+    .pipe(sass({
+      quietDeps: true
+    }).on("error", sass.logError))
+    .pipe(plumber())
+    .pipe(concat("globalcomps.css"))
+    .pipe(dest(conf.dest.destCssWATTSbase + conf.dest.cssdest.globalComps))
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(cleanCSS())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest(conf.dest.destCssWATTSbase + conf.dest.cssdest.globalComps))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 function homepageCSS() {
-    return src(conf.src.srcCssTDRAbase + conf.src.sasssrc.homepage)
-        .pipe(sass().on("error", sass.logError))
-        .pipe(plumber())
-        .pipe(concat("homepage.css"))
-        .pipe(dest(conf.dest.destCssTDRAbase + conf.dest.cssdest.homepage))
-        .pipe(
-            rename({
-                suffix: ".min",
-            })
-        )
-        .pipe(cleanCSS())
-        .pipe(postcss([cssnano()]))
-        .pipe(dest(conf.dest.destCssTDRAbase + conf.dest.cssdest.homepage))
-        .pipe(browserSync.reload({stream: true}));
+  return src(conf.src.srcCssWATTSbase + conf.src.sasssrc.homepage)
+    .pipe(sass().on("error", sass.logError))
+    .pipe(plumber())
+    .pipe(concat("homepage.css"))
+    .pipe(dest(conf.dest.destCssWATTSbase + conf.dest.cssdest.homepage))
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(cleanCSS())
+    .pipe(postcss([cssnano()]))
+    .pipe(dest(conf.dest.destCssWATTSbase + conf.dest.cssdest.homepage))
+    .pipe(browserSync.reload({ stream: true }));
 }
 
 
@@ -76,19 +76,19 @@ function homepageCSS() {
 
 //global js minification
 function globalScripts() {
-    // Minify and copy all JavaScript (except vendor scripts)
-    return src(conf.globalScripts.src)
-        .pipe(plumber())
-        .pipe(concat("global.js"))
-        .pipe(dest(conf.dest.destJsTDRAbase + conf.dest.jsdest.globaljs))
-        .pipe(terser())
-        .pipe(
-            rename({
-                suffix: ".min",
-            })
-        )
-        .pipe(dest(conf.dest.destJsTDRAbase + conf.dest.jsdest.globaljs))
-        .pipe(browserSync.stream());
+  // Minify and copy all JavaScript (except vendor scripts)
+  return src(conf.globalScripts.src)
+    .pipe(plumber())
+    .pipe(concat("global.js"))
+    .pipe(dest(conf.dest.destJsWATTSbase + conf.dest.jsdest.globaljs))
+    .pipe(terser())
+    .pipe(
+      rename({
+        suffix: ".min",
+      })
+    )
+    .pipe(dest(conf.dest.destJsWATTSbase + conf.dest.jsdest.globaljs))
+    .pipe(browserSync.stream());
 }
 
 // //homepage js minification
@@ -98,34 +98,34 @@ function globalScripts() {
 //         .src(conf.homepagescripts.src)
 //         .pipe(plumber())
 //         .pipe(concat("global.js"))
-//         .pipe(gulp.dest(conf.dest.destJsTDRAbase + conf.dest.jsdest.homepagejs))
+//         .pipe(gulp.dest(conf.dest.destJsWATTSbase + conf.dest.jsdest.homepagejs))
 //         .pipe(terser())
 //         .pipe(
 //             rename({
 //                 suffix: ".min",
 //             })
 //         )
-//         .pipe(gulp.dest(conf.dest.destJsTDRAbase + conf.dest.jsdest.homepagejs))
+//         .pipe(gulp.dest(conf.dest.destJsWATTSbase + conf.dest.jsdest.homepagejs))
 //         .pipe(browserSync.stream());
 // }
 
 
 function watchTask() {
-    // watching scripts/scss/twig/html files
+  // watching scripts/scss/twig/html files
 
-   // gulp.watch("../../../Feature/**/**/*.js", gulp.series(scripts, reload));
-   watch("**/*.html", browsersyncReload);
-   watch(['assets/scss/**/*.scss', 'assets/scripts/**/*.js'], series(browsersyncReload));
+  // gulp.watch("../../../Feature/**/**/*.js", gulp.series(scripts, reload));
+  watch("**/*.html", browsersyncReload);
+  watch(['assets/scss/**/*.scss', 'assets/scripts/**/*.js'], series(browsersyncReload));
 }
 
 
 // Default Gulp task
-exports.TDRA = series(globalcompscss, globalScripts, homepageCSS, browsersyncServe, watchTask);
+exports.WATTS = series(globalcompscss, globalScripts, homepageCSS, browsersyncServe, watchTask);
 
 // Gulp component Task
 
 // gulp.task(
-//     "TDRA-CSS",
+//     "WATTS-CSS",
 //     gulp.series(globalcompscss, homepage, browsersyncServe, watch),
 //     function (cb) {
 //         // Static Server
@@ -133,7 +133,7 @@ exports.TDRA = series(globalcompscss, globalScripts, homepageCSS, browsersyncSer
 // );
 
 // gulp.task(
-//     "TDRA-JS",
+//     "WATTS-JS",
 //     gulp.series(globalScripts, homepagescripts),
 //     function (cb) {
 //         // Static Server

@@ -1,47 +1,44 @@
 {
-    "src": {
-      "srcCssTDRAbase": "assets/scss/themes/",
-      "sasssrc": {
-        "globalComps": "globalComponent.scss",
-        "homepage": "homepage.scss",
-        "contactus": "contactus.scss"
-      }  
+  "src": {
+    "srcCssWATTSbase": "assets/scss/themes/",
+    "sasssrc": {
+      "globalComps": "globalComponent.scss",
+      "homepage": "homepage.scss",
+      "contactus": "contactus.scss"
+    }
+  },
+  "dest": {
+    "destCssWATTSbase": "assets/css/minified_comps/",
+    "destJsWATTSbase": "assets/js/compressed_comps/",
+    "cssdest": {
+      "globalComps": "globalComponent/",
+      "homepage": "homepage/"
     },
-    "dest": {
-      "destCssTDRAbase": "assets/css/minified_comps/",
-      "destJsTDRAbase": "assets/js/compressed_comps/",
-      "cssdest": {
-        "globalComps": "globalComponent/",
-        "homepage": "homepage/"
-        },
-        "jsdest": {
-            "globaljs": "globalComponent",
-            "homepagejs": "homepage"
-        }
-     
-    },
-
-    "globalScripts": {
-      "src": [
-        "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-        "node_modules/jquery/dist/jquery.min.js",
-        "node_modules/slick-carousel/slick/slick.min.js",
-        "assets/scripts/global/header.js",
-        "assets/scripts/global/footer.js"
-      ],
-      "dest": "js"
-    },
-
-    "homepagescripts": {
-        "src": [
-          "assets/scripts/homepage/main.js"
-        ],
-        "dest": "js"
-      },
-      "contactusscrpits": {
-        "src": [
-          "assets/scripts/contactus/contact-us.js"
-        ],
-        "dest": "js"
-      }
+    "jsdest": {
+      "globaljs": "globalComponent",
+      "homepagejs": "homepage"
+    }
+  },
+  "globalScripts": {
+    "src": [
+      "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "node_modules/jquery/dist/jquery.min.js",
+      "node_modules/slick-carousel/slick/slick.min.js",
+      "assets/scripts/global/header.js",
+      "assets/scripts/global/footer.js"
+    ],
+    "dest": "js"
+  },
+  "homepagescripts": {
+    "src": [
+      "assets/scripts/homepage/main.js"
+    ],
+    "dest": "js"
+  },
+  "contactusscrpits": {
+    "src": [
+      "assets/scripts/contactus/contact-us.js"
+    ],
+    "dest": "js"
+  }
 }
